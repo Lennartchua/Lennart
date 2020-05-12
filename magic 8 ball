@@ -19,7 +19,7 @@ while ans:
         print "Outlook good"
     
     elif answers == 3:
-        print "You may rely on it"
+        print "yes its true"
     
     elif answers == 4:
         print "Ask again later"
@@ -28,7 +28,7 @@ while ans:
         print "Concentrate and ask again"
     
     elif answers == 6:
-        print "Reply hazy, try again"
+        print "I dont understand"
     
     elif answers == 7:
         print "My reply is no"
