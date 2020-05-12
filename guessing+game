@@ -1,0 +1,25 @@
+import random
+
+secret = random.randint(1,20)
+name = input("whats your name? ")
+print("ok, {} i am thinking of a number between 1 to 20. ".format(name))
+
+tries = 6
+count = 0
+while count < tries:
+  guess = input("take a guess")
+  guess = int(guess)
+
+  if guess > secret:
+    print("your guess is too high ")
+
+  elif guess < secret: 
+    print("your guess is too low ")
+
+  elif guess == secret:
+    print("You guessed it correctly in {} tries".format(count))
+    break 
+
+  elif count  == 6:
+    print("you did not guess the number. Try again")
+  count = count + 1
