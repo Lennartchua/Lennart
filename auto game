@@ -1,0 +1,309 @@
+monsters = {"ogre" : 8 , "mummy" : 6, "werewolf": 5, "troll": 4, "goblin" : 3, "kobold": 2}
+
+killed = [ "werewolf" , "goblin" , "kobold", "zombie"]
+
+
+
+player_xp = 0 
+
+
+
+for elem in killed:
+
+    if elem in monsters:
+
+        player_xp += monsters[elem]
+
+    
+
+print(player_xp)    
+
+
+
+
+
+# In[28]:
+
+
+
+
+
+monsters = {
+
+    "ogre": {"XP":8, "damage":3},
+
+    "mummy": {"XP":6, "damage":4},
+
+    "werewolf": {"XP":5, "damage":4},
+
+    "troll": {"XP":4, "damage":2},
+
+    "goblin": {"XP":3, "damage":1},
+
+    "kobold": {"XP":2, "damage":1}
+
+}
+
+
+
+targets = [ "werewolf" , "goblin" , "kobold", "zombie"]
+
+
+
+player_xp = 0 
+
+
+
+for elem in targets:
+
+    if elem in monsters and monsters[elem]['damage'] < 3:
+
+        player_xp += monsters[elem]['XP']
+
+
+
+    
+
+    
+
+print(player_xp)
+
+
+
+
+
+# In[44]:
+
+
+
+
+
+import random, time
+
+
+
+goblin = {"name":"Goblin",
+
+          "hp":65,
+
+          "strength":5,
+
+          'dodge': 20
+
+}
+
+
+
+ogre = {"name":"Ogre",
+
+          "hp":100,
+
+          "strength":15
+
+}
+
+
+
+# player dictionary here
+
+player = {
+
+    'hp': 120,
+
+    'strength':50,
+
+    'dodge':15
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("Battle... ", end="")
+
+time.sleep(1)
+
+print("START!!!")
+
+
+
+# Battle loop here
+
+
+
+while player["hp"] > 0 and goblin["hp"] > 0:
+
+    player_damage = random.randint(1, player['strength'])
+
+    goblin_dodge = random.randint(1,100)
+
+    
+
+    if goblin_dodge > goblin['dodge']:
+#you can change the -= to == if you want a continuous loop of the game to run. 
+        goblin['hp'] -= player_damage
+
+        print('player hit goblin for {} player_damage'.format(player_damage))
+
+        print('Goblin HP: {}'.format(goblin['hp']))
+
+        if goblin['hp'] < 0:
+
+            break
+
+    time.sleep(random.randint(1,2))
+
+
+
+    goblin_damage = random.randint(1, goblin['strength'])
+
+    player_dodge = random.randint(1,100)
+
+    player['hp'] -= goblin_damage
+
+    if player['hp'] > 0:
+
+        print('{} hit player for {} damage'.format('goblin',goblin_damage))
+
+        print('Player HP: {}'.format(player['hp']))
+
+    time.sleep(random.randint(1,2))
+
+        
+
+# Winner announcement here
+
+
+
+if player['hp'] <= 0:
+
+    print('{} Wins'.format('Goblin'))
+
+elif goblin['hp'] <= 0:
+
+    print('player wins')
+
+
+
+
+
+# In[39]:
+
+
+
+
+
+import random, time
+
+
+
+goblin = {"name":"Goblin",
+
+          "hp":65,
+
+          "strength":5,
+
+          'dodge': 20
+
+}
+
+
+
+ogre = {"name":"Ogre",
+
+          "hp":100,
+
+          "strength":15
+
+}
+
+
+
+# player dictionary here
+
+player = {
+
+    'hp': 120,
+
+    'strength':50,
+
+    'dodge':15
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("Battle... ", end="")
+
+time.sleep(1)
+
+print("START!!!")
+
+
+
+# Battle loop here
+
+
+
+while player["hp"] > 0 and goblin["hp"] > 0:
+
+    damage = random.randint(1, player['strength'])
+
+    goblin['hp'] -= damage
+
+    print('player hit goblin for {} damage'.format(damage))
+
+    print('Goblin HP: {}'.format(goblin['hp']))
+
+    time.sleep(random.randint(1,2))
+
+    
+
+    goblin_damage = random.randint(1, goblin['strength'])
+
+    player['hp'] -= goblin_damage
+
+    if player['hp'] > 0:
+
+        print('{} hit player for {} damage'.format('goblin',goblin_damage))
+
+        print('Player HP: {}'.format(player['hp']))
+
+    time.sleep(random.randint(1,2))
+
+        
+
+# Winner announcement here
+
+
+
+if player['hp'] <= 0:
+
+    print('{} Wins'.format('Goblin'))
+
+else:
+
+    print('player wins')
