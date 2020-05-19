@@ -1,4 +1,3 @@
-Lennart best script in the world
 $user = 'UserName '
 $pass = ConvertTo-secureString - String 'Password'  -AsplainText -Force
 $credential = New-Objective  -TypeName system.Management. Automation.PSCredendtial  - ArgumentList $user , $pass
