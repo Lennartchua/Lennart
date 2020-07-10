@@ -1,0 +1,7 @@
+print("what is my name ")
+secret_word = "lennart"
+guess = ""
+
+while guess !=secret_word:
+    guess = input("Enter guess: ")
+print("Wow you know me!")
