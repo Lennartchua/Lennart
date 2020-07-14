@@ -1,0 +1,5 @@
+name = input("who are you")
+if name == "ray":
+  print("IKAN PARI")
+else:
+  print("lennart too good for this")
