@@ -1,5 +1,12 @@
-name = input("who are you")
-if name == "ray":
-  print("IKAN PARI")
+name =input("who are you?")
+if name =="ray":
+ print("one and only mighty")
 else:
-  print("lennart too good for this")
+ print("lennart too good for this")
+ 
+ i = 1
+ while i <+ 11:
+  print(i)
+  i += 1
+
+print("IKAN PARI")
