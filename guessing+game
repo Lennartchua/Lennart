@@ -4,7 +4,7 @@ secret = random.randint(1,20)
 name = input("whats your name? ")
 print("ok, {} The number I am thinking of is between 1 to 100. ".format(name))
 
-tries = 15
+tries = 6
 count = 0
 while count < tries:
   guess = input("take a guess")
