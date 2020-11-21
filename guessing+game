@@ -1,6 +1,6 @@
 import random
 
-secret = random.randint(1,20)
+secret = random.randint(1,100)
 name = input("whats your name? ")
 print("ok, {} The number I am thinking of is between 1 to 100. ".format(name))
 
@@ -20,6 +20,6 @@ while count < tries:
     print("You guessed it correctly in {} tries".format(count))
     break 
 
-  elif count  == 15:
+  elif count  == 6:
     print("you did not guess the number. Try again")
   count = count + 1
