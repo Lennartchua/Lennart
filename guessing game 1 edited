@@ -1,6 +1,6 @@
 import random 
 
-secret = random.randint(1,20)
+secret = random.randint(1,100)
 #integers from 1-20
 name = input("whats your name? ")
 print("ok, {} The number I am thinking of is between 1 to 100. ".format(name))
